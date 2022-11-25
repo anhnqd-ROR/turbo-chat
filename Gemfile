@@ -72,4 +72,13 @@ group :test do
   gem "webdrivers"
 end
 
+group :staging, :production do
+  gem "capistrano", "3.16.0"
+  gem "capistrano3-puma"
+  gem "capistrano-rails"
+  gem "capistrano-sidekiq"
+  gem "capistrano-bundler"
+  gem "rvm1-capistrano3", require: false
+end
+
 gem "devise", "~> 4.8"
