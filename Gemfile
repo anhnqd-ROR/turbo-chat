@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.4"
+ruby "3.0.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -70,6 +70,15 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :staging, :production do
+  gem "capistrano", "3.16.0"
+  gem "capistrano3-puma"
+  gem "capistrano-rails"
+  gem "capistrano-sidekiq"
+  gem "capistrano-bundler"
+  gem "rvm1-capistrano3", require: false
 end
 
 gem "devise", "~> 4.8"
