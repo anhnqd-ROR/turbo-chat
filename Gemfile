@@ -82,3 +82,5 @@ group :staging, :production do
 end
 
 gem "devise", "~> 4.8"
+
+gem "pagy", "~> 5.10"
